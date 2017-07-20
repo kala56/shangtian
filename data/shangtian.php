@@ -83,7 +83,7 @@
 		$action = $_REQUEST['action'];//0表示删除，1表示添加
 		$str = file_get_contents('http://api.shangtianapp.com/api/v1/user/user_collect?user_id='.$userID.'&access_token='.$token.'&collect_id='.$collect_id.'&collect_type='.$collect_type.'&action='.$action);
 	}elseif ($type == "getHistory") {
-		$str = file_get_contents('http://api.shangtianapp.com/api/v2/moment/show_history')
+		$str = file_get_contents('http://api.shangtianapp.com/api/v2/moment/show_history');
 	}
 	echo "$str";
 ?>
