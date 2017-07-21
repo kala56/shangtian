@@ -2,8 +2,8 @@ var app = angular.module("app",["ngRoute"]);
 // config配置路由
 app.config(['$routeProvider',function($routeProvider){
 	$routeProvider.when("/home",{  //主页
-		templateUrl:"",
-		controller:""
+		templateUrl:"html/home.html",
+		controller:"homecontroller"
 	})
 	.when("/piece",{  //一套
 		templateUrl:"html/titleList.html",
