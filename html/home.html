@@ -1,0 +1,40 @@
+<div class="all">
+	<div class="header">
+		 <div class="swiper-container headerone">
+		 	<div class="swiper-wrapper wrappers">
+				<div class="swiper-slide slides" ng-repeat="imgs in upskyList">
+					<img src="{{imgs.image}}" alt="">
+				</div>		
+		 	</div>
+		 	<div class="swiper-container diden headertwo">
+				<div class="swiper-wrapper ">
+					<div class="swiper-slide headers" ng-repeat="root in upskyList">
+						<p class="num stop-swiping">{{root.rate_value}}</p>
+						<p class="names stop-swiping">{{root.rate_name}}</p>
+						<p class="words stop-swiping">{{root.words}}</p>
+				</div>
+			</div>
+	</div>
+	<div class="center">
+		<div ng-repeat="texts in centerskyList" >
+			<div class="titleimage_box">
+				<div class="titleimage" style="background-image: url('{{texts.head_image}}');" >	<div class="phrase">{{texts.phrase}}</div>
+					<div>{{texts.rate_name}}</div>
+					<div>{{texts.rate_value}}</div>			
+				</div>
+					
+				<div class="center_text">
+						<div class="chinese_title">{{texts.chinese_title}}</div>
+						<div>{{texts.main_description}}</div>
+						<p>{{texts.occasion}}<span>{{texts.label[0].value}}</span></p>
+						<div></div>
+						<div>{{texts.chinese_title}}</div>
+						<p>{{texts.fix_price}}</p>
+						<p>{{texts.price}}</p>
+						<div class="min_img"><img src="{{texts.cover_image}}" alt=""></div>
+					</div>
+			</div>
+				
+		</div>	
+	</div>
+</div>  
