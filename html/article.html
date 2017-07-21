@@ -1,5 +1,105 @@
 <div class="article_box">
-	<ul>
-		<li ng-repeat="obj in articleBox">{{obj.name}}</li>
-	</ul>
+	<header class="article_header">
+		<h3 class="one_article">一篇<a href="#!aside" ng-show="isShow"  ng-click="hideImg()"><img lazy-src="images/下拉箭头@2x.png" alt=""></a></h3>
+		<ul class="article_nav">
+			<li ng-repeat="obj in articleBox" ng-click= "fun($index)">
+				<div>{{obj.name}}</div>
+			</li>
+		</ul>
+	</header>
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<!-- 风格 -->
+			<div class="swiper-slide article_slide" >
+				<ul>
+					<li ng-repeat ="style in articleStyle">
+						<div class="article_zan" >
+									<img lazy-src="images/场景-收藏@2x.png" ng-click="love_zan($index)">
+									<span>{{style.collect_count}}</span>
+						</div>	
+						<a href="{{style.redirect_url}}" class="article_section">
+								<div class="border">
+									<img lazy-src="{{style.table_image}}">
+								</div>			
+							<div class="article_title">{{style.chinese_title}}</div>
+							<p>{{style.article_description}}</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!-- 穿衣 -->
+				<div class="swiper-slide article_slide">
+				<ul>
+					<li ng-repeat ="Dress in articleDress">
+						<div class="article_zan">
+									<img lazy-src="images/场景-收藏@2x.png" alt="">
+									<span>{{Dress.collect_count}}</span>
+						</div>	
+						<a href="{{Dress.redirect_url}}" class="article_section">
+							<div class="border">
+								<img lazy-src="{{Dress.table_image}}">
+							</div>	
+							<div class="article_title">{{Dress.chinese_title}}</div>
+							<p>{{Dress.article_description}}</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!-- 穿鞋 -->
+			<div class="swiper-slide article_slide">
+				<ul>
+					<li ng-repeat ="Puton in articlePuton">
+						<div class="article_zan">
+									<img lazy-src="images/场景-收藏@2x.png" alt="">
+									<span>{{Puton.collect_count}}</span>
+						</div>	
+						<a href="{{Puton.table_image}}" class="article_section">
+							<div class="border">
+								<img lazy-src="{{Puton.table_image}}">	
+							</div>
+							<div class="article_title">{{Puton.chinese_title}}</div>
+							<p>{{Puton.article_description}}</p>
+						</a>
+					</li>
+				</ul>	
+			</div>
+			<!-- 知识 -->
+			<div class="swiper-slide article_slide">
+				<ul>
+					<li ng-repeat ="Knowledge in articleKnowledge">
+						<div class="article_zan">
+									<img lazy-src="images/场景-收藏@2x.png" alt="">
+									<span>{{Knowledge.collect_count}}</span>
+						</div>	
+						<a href="{{Knowledge.table_image}}" class="article_section">
+							<div class="border">	
+								<img lazy-src="{{Knowledge.table_image}}">	
+							</div>
+							<div class="article_title">{{Knowledge.chinese_title}}</div>
+							<p>{{Knowledge.article_description}}</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!-- 人物 -->
+			<div class="swiper-slide article_slide">
+				<ul>
+					<li ng-repeat ="Man in articleMan">
+						<div class="article_zan">
+									<img lazy-src="images/场景-收藏@2x.png" alt="">
+									<span>{{Man.collect_count}}</span>
+						</div>	
+						<a href="{{Man.table_image}}" class="article_section">
+							<div class="border">
+								<img lazy-src="{{Man.table_image}}">
+							</div>	
+							<div class="article_title">{{Man.chinese_title}}</div>
+							<p>{{Man.article_description}}</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="collect"></div>
 </div>
