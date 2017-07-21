@@ -10,8 +10,8 @@ app.config(['$routeProvider',function($routeProvider){
 		controller:"skeyController"
 	})
 	.when("/cover",{  //一件
-		templateUrl:"",
-		controller:""
+		templateUrl:"html/cover.html",
+		controller:"coverController"
 	})
 	.when("/article",{  //一篇
 		templateUrl:"html/article.html",

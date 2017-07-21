@@ -1,0 +1,101 @@
+<div class="coverBox">
+	<!-- 商品菜单 -->
+	<div class ="coverMenu">
+		<h3>
+			<span>一件</span> 
+			<img src="images/down_arrow@2x.png" alt="">
+		</h3>
+		<div class ="outBox">
+			<div class ="menuList ">
+				<div ng-repeat = "obj in coverList" ng-click="changeFace($index)">
+					<span>{{obj.name}}</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 商品列表 -->
+	<div class="swiper-container currentList">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+			<!-- 重复创建的商品 -->
+				<div class = "oneBox" ng-repeat="product in productList" >
+					<div class = "oneImg" style="background-image:url('{{product.head_image}}');">
+						<div>{{product.chinese_title}}</div>
+					 </div>
+					<div class ="oneDirection">{{product.main_description}}</div>
+					<div class = "smallDatial">
+						<div class ="Sleft">
+							<div>
+								<span>{{product.occasion}}</span> 
+								<img src="images/best-1@2x.png">
+								<img src="images/SALE@2x.png">
+							</div>
+							<div class = "priceAndImg">
+								<div>
+									<h4>{{product.english_title}}</h4>
+									<div>{{product.chinese_title}}</div>
+									<s>{{product.fix_price}}</s>
+									<span>{{product.price}}</span>
+								</div>
+								<img src="{{product.cover_image}}" alt="" >
+							</div>
+						</div>
+						<div class ="Sright">
+							<img src="images/正常@2x.png"  ng-click="like($index)" class ="isLove">
+							<span>{{product.collect_count}}</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="swiper-slide">
+				<div class ="coverTwoBox">
+					<div class = "twoBox" ng-repeat="jacket in jacketList">
+						<div class ="Sleft" style="background-image:url({{jacket.cover_image}})">
+							<div class = "priceAndInfo">
+								<div>
+									<span>{{jacket.occasion}}</span> 
+									<img src="images/SALE@2x.png">
+								</div>
+								<h4>{{jacket.english_title}}</h4>
+								<div class = "cuTitle">{{jacket.chinese_title}}</div>
+								<s>{{jacket.fix_price}}</s>
+								<span>{{jacket.price}}</span>
+							</div>
+						</div>
+						<div class ="Sright">
+							<div><img src="images/正常@2x.png"  ng-click="likeTwo($index)" class ="isLove"></div>
+							<span>{{jacket.collect_count}}</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="swiper-slide">
+				hhjdhjhjjhdjh
+			</div>
+			<div class="swiper-slide">4</div>
+			<div class="swiper-slide">5</div>
+			<div class="swiper-slide">
+				<div class ="coverTwoBox">
+					<div class = "twoBox" ng-repeat="jacket in jacketList">
+						<div class ="Sleft" style="background-image:url({{jacket.cover_image}})">
+							<div class = "priceAndInfo">
+								<div>
+									<span>{{jacket.occasion}}</span> 
+									<img src="images/SALE@2x.png">
+								</div>
+								<h4>{{jacket.english_title}}</h4>
+								<div class = "cuTitle">{{jacket.chinese_title}}</div>
+								<s>{{jacket.fix_price}}</s>
+								<span>{{jacket.price}}</span>
+							</div>
+						</div>
+						<div class ="Sright">
+							<div><img src="images/正常@2x.png"  ng-click="likeTwo($index)" class ="isLove"></div>
+							<span>{{jacket.collect_count}}</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
