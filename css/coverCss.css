@@ -1,0 +1,264 @@
+*{
+	padding:0;
+	margin:0;
+	-webkit-tap-highlight-color:transparent;
+	/*设置元素宽高计算方式*/
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+body{
+	font-size: 16px;
+	position: relative;
+	font-family: "微软雅黑";
+	background-color: rgb(51,51,51);
+}
+ul{
+	list-style-type: none;
+}
+a{
+	text-decoration:none;
+}
+.coverBox{
+	width: 100%;
+	max-width: 640px;
+	min-width: 320px;
+	margin: 0 auto;
+}
+.coverMenu{
+	width:100%;
+	height:70px;
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+	background-color: rgb(27,27,27);
+}
+.coverMenu>h3{
+	width:100%;
+	display: flex;
+	margin-top:3%;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+.coverMenu>h3>span{
+	color:white;
+}
+.coverMenu>h3>img{
+	width:4%;
+	height:100%;
+	margin:0 1%;
+}
+.coverMenu>.outBox{
+	width:100%;
+	overflow: auto;
+}
+.coverMenu>.outBox>.menuList{
+	display: flex;
+	width:120%;
+	overflow: hidden;
+}
+.coverMenu>.outBox>.menuList>div{
+	width:16%;
+	padding-bottom: 1px;
+	overflow: hidden;
+	text-align: center;
+}
+.coverMenu>.outBox>.menuList>div>span{
+	color:white;
+	transition: all .3s;
+}
+.coverMenu>.outBox>.menuList>div:first-child>span{
+	color:rgb(233,191,81);
+	border-bottom:1px solid rgb(233,191,81);
+}
+.ColorBor{
+	color:rgb(233,191,81) !important;
+	border-bottom:1px solid rgb(233,191,81) !important;
+}
+.currentList{
+	width:100%;
+}
+.currentList .oneBox{
+	width:100%;
+	background-color: white;
+}
+.currentList .oneBox .oneImg{
+	height:350px;
+	display: flex;
+	align-items: flex-end;
+	background-size: 100% 113%;
+	/*background-image:linear-gradient(to bottom,red,transparent);*/
+	box-shadow:0px -10px 40px 0px rgba(255,255,255,0.6) inset;
+}
+.currentList .oneBox .oneImg>div{
+	width:90%;
+	margin:0 auto -20px;
+	color:black;
+	font-size: 2rem;
+}
+.currentList .oneBox .oneDirection{
+	width:90%;
+	font-size:13px;
+	margin:10% auto;
+	color:rgb(109,109,109);
+}
+.currentList .oneBox .smallDatial{
+	width:90%;
+	height:250px;
+	margin:10% auto 5%;
+	display: flex;
+	justify-content: space-between;
+}
+.currentList .oneBox .smallDatial .Sleft{
+	width:85%;
+	height:100%;
+	display: flex;
+	flex-direction: column;	
+}
+.currentList .oneBox .smallDatial .Sleft>div:first-child{
+	display: flex;
+	align-items: center;	
+	height:15%;
+}
+.currentList .oneBox .smallDatial .Sleft>div:first-child>span{
+	color:rgb(109,109,109);
+}
+.currentList .oneBox .smallDatial .Sleft>div{
+
+}
+.currentList .oneBox .smallDatial .Sleft>div:first-child>img{
+	width:12%;
+	margin:0 1%;
+}
+.currentList .oneBox .smallDatial .Sleft .priceAndImg{
+	width:100%;
+	height:70%;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;	
+}
+.currentList .oneBox .smallDatial .Sleft .priceAndImg>div{
+	width:30%;
+	height:80%;
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+}
+.currentList .oneBox .smallDatial .Sleft .priceAndImg>div>div{
+	font-size: 17px;
+	font-weight: bold;
+}
+.currentList .oneBox .smallDatial .Sleft .priceAndImg div s{
+	font-size:15px;
+	color:rgb(154,154,154);
+}
+.currentList .oneBox .smallDatial .Sleft .priceAndImg div span{
+	font-size: 18px;
+	color:rgb(206,27,46);
+}
+.currentList .oneBox .smallDatial .Sleft .priceAndImg img{
+	width:70%;
+}
+.currentList .oneBox .smallDatial .Sright{
+	width:15%;
+	text-align:center;
+}
+/*点赞时的动画*/
+@keyframes big{
+	from{
+		transform: scale(1);
+	}
+	50%{
+		transform: scale(1.2);
+	}
+	to{
+		transform: scale(1);
+	}
+}
+@keyframes big1{
+	from{
+		transform: scale(1);
+	}
+	50%{
+		transform: scale(1.2);
+	}
+	to{
+		transform: scale(1);
+	}
+}
+.currentList .oneBox .smallDatial .Sright img{
+	transition: all .3s;
+	width:95%;
+}
+.currentList .oneBox .smallDatial .Sright span{
+	color:rgb(153,153,153);
+}
+
+/*第二个界面*/
+.coverTwoBox{
+	width: 100%;
+	background-color:white;
+	border:1px solid transparent;
+}
+.coverTwoBox>.twoBox{
+	width:90%;
+	height:300px;
+	display: flex;
+	margin:3% auto;
+	justify-content: space-between;
+}
+.coverTwoBox>.twoBox>.Sleft{
+	width:85%;
+	height:100%;
+	background-size: 82% 80%;
+	background-repeat: no-repeat;
+	background-position: right top;
+}
+.coverTwoBox>.twoBox>.Sleft>.priceAndInfo{
+	width:50%;
+	height:70%;
+	display: flex;
+	flex-direction:column;
+	justify-content: space-around;
+}
+.coverTwoBox>.twoBox>.Sleft>.priceAndInfo>div{
+	display: flex;
+	align-items: center;	
+	height:15%;
+}
+.coverTwoBox>.twoBox>.Sleft>.priceAndInfo>div>span{
+	color:rgb(109,109,109);
+}
+.coverTwoBox>.twoBox>.Sleft>.priceAndInfo>div>img{
+	width:16%;
+	height:70%;
+	margin:0 1%;
+}
+.coverTwoBox>.twoBox>.Sleft>.priceAndInfo>.cuTitle{
+	font-size: 20px;
+	text-shadow: 1px 1px 0px white;
+}
+.coverTwoBox>.twoBox>.Sleft>.priceAndInfo>s{
+	font-size:15px;
+	color:rgb(154,154,154);
+}
+.coverTwoBox>.twoBox>.Sleft>.priceAndInfo>span{
+	font-size: 18px;
+	color:rgb(206,27,46);
+}
+.coverTwoBox>.twoBox>.Sright{
+	width:15%;
+	height:100%;
+	display: flex;
+	flex-direction:column;
+	align-items: center;
+}
+.coverTwoBox>.twoBox>.Sright>div{
+	width:100%;
+}
+.coverTwoBox>.twoBox>.Sright>div>img{
+	width:100%;
+}
+.coverTwoBox>.twoBox>.Sright>span{
+	color:rgb(153,153,153);
+}
