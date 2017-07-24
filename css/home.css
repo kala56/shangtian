@@ -1,0 +1,81 @@
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-tap-highlight-color:transparent;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+body{
+	font-size: 14px;
+	font-family: "微软雅黑";
+	color: #333;
+}
+a{
+	color: #333;
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: none;
+}
+input{
+	border:none;
+	outline: none;
+	-webkit-appearance:none;
+}
+ul,ol{
+	list-style: none;
+}
+.all{
+	background-color: rgb(51,51,51);
+	width: 100%;
+	max-width: 640px;
+	min-width: 320px;
+	margin: 0 auto;
+}
+.header,.header>.headerone,.header>.headerone>.wrappers{
+	width: 100%;
+}
+.headers{
+	text-align: center;
+}
+.headers>p{
+	width: 100%;
+}
+img{
+	width: 100%;
+}
+.diden{
+	width: 40%;
+	left: 30%;
+	margin-top: -70%;
+	position: absolute;
+	z-index: 100;
+}
+.num{
+	font-size: 100px;
+	color: black /*!important*/;
+}
+.headers>.num:first-child{
+	color:white; 
+}
+
+.center{
+	margin-top: 10px;
+}
+.center>div{
+	width: 100%;
+	height: 900px;
+	background-color: white;
+	margin-bottom: 10px;
+}
+.titleimage_box>.titleimage{
+	width: 100%;
+	height: 550px;
+	background-size: 100% 100%;
+	box-shadow: 0px -20px 20px 0px rgba(255,255,255,0.6) inset;
+	background-repeat: no-repeat;
+}
+.min_img{
+	margin:auto;
+	width: 40%;
+}
