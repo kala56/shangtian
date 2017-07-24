@@ -21,10 +21,10 @@ app.config(['$routeProvider',function($routeProvider){
 		templateUrl:"html/aside.html",
 		controller:""
 	})
-	// .when("/myself",{  //个人中心
-	// 	templateUrl:"html/myself.html",
-	// 	controller:"myself_con"
-	// })
+	.when("/myself",{  //个人中心
+		templateUrl:"html/myself.html",
+		controller:"myself_con"
+	})
 	// .otherwise({
 	// 	redirectTo:'/home' //默认
 	// })
@@ -33,11 +33,30 @@ app.config(['$routeProvider',function($routeProvider){
 app.controller("rootController",function($scope){
 	$scope.isShow = true;
 	$scope.showImg = function(){
-		// console.log("------"+$scope.isShow)
 		$scope.isShow = !$scope.isShow;
 	}
 	$scope.hideImg = function(){
-		console.log("------"+$scope.isShow)
+		$scope.isShow = !$scope.isShow;
+	}
+	$scope.togeImg = function(){
+		$scope.isShow = !$scope.isShow;
+	}
+	$scope.home = function(){
+		$scope.isShow = !$scope.isShow;
+	}
+	// $scope.homeImg = function(){
+	// 	$scope.isShow = !$scope.isShow;
+	// }
+	// $scope.one = function(){
+	// 	$scope.isShow = !$scope.isShow;
+	// }
+	// $scope.two = function(){
+	// 	$scope.isShow = !$scope.isShow;
+	// }
+	$scope.three = function(){
+		$scope.isShow = !$scope.isShow;
+	}
+	$scope.collect = function(){
 		$scope.isShow = !$scope.isShow;
 	}
 })
