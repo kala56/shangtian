@@ -1,0 +1,75 @@
+<div class="all">
+	<div class="nav">
+		<div><h2>一套</h2><img src="images/箭头.png" alt=""></div>
+		<ul class="title">
+			<li ng-repeat = "value in skeyList">
+				<a href="">{{value.name}}</a>
+			</li>
+			
+		</ul>
+	</div>
+	<div>
+		<!-- <div ng-repeat = "val in skeyProduct" class="big_border" id="best">
+			<a href="" class="product_message">
+				<div  class="picture" style="background-image: url('{{val.cover_image}}');"></div>
+				<div class="topText">
+					{{val.chinese_title}}
+				</div>
+				<div class="upText">
+					{{val.lead_words}}
+				</div>
+			</a>
+		</div> -->
+		<!-- <div ng-repeat = "live in liveProduct" class="big_border second_box">
+			<a href="" class="second">
+				<div class="left_border">
+					<div class="base">{{live.rate_name}}</div>
+					<div class="small">index</div>
+					<div class="product_number">{{live.rate_value}}</div>
+				</div>
+				<div class="life">
+					{{live.occasion}}
+				</div>
+				<div  class="cover_image" style="background-image: url('{{live.cover_image}}');">
+				</div>
+				<div class = "describe">
+					{{live.chinese_title}}
+				</div>
+			</a>
+		</div> -->
+		<div ng-repeat = "school in schoolProduct" class="big_border second_box">
+			<a href="" class="second">
+				<div class="left_border">
+					<div class="base">{{school.rate_name}}</div>
+					<div class="small">index</div>
+					<div class="product_number">{{school.rate_value}}</div>
+				</div>
+				<div class="life">
+					{{school.occasion}}
+				</div>
+				<div  class="cover_image" style="background-image: url('{{school.cover_image}}');">
+				</div>
+				<div class = "describe">
+					{{school.chinese_title}}
+				</div>
+			</a>
+		</div>
+		<div ng-repeat = "tryst in trystProduct" class="big_border second_box">
+			<a href="" class="second">
+				<div class="left_border">
+					<div class="base">{{tryst.rate_name}}</div>
+					<div class="small">index</div>
+					<div class="product_number">{{tryst.rate_value}}</div>
+				</div>
+				<div class="life">
+					{{tryst.occasion}}
+				</div>
+				<div  class="cover_image" style="background-image: url('{{tryst.cover_image}}');">
+				</div>
+				<div class = "describe">
+					{{tryst.chinese_title}}
+				</div>
+			</a>
+		</div>
+	</div>
+</div>
