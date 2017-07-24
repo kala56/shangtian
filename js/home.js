@@ -42,13 +42,11 @@ app.controller("homecontroller",function($scope,$http){
         console.log($scope.centerskyList);
         for (var i = 0 ; i < $scope.centerskyList.length; i++) {
             if ($scope.centerskyList[i].collect_type == 1) {
-                $("titleimage").css("background-image","url("+$scope.centerskyList[i].head_image+")");
-                // console.log($scope.centerskyList[i].head_image)
+                $(".titleimage").css("background-image","url("+$scope.centerskyList[i].head_image+")");
+            
             }else{
-                $("titleimage").css("background-image","url("+$scope.centerskyList[i].cover_image+")");
+                $(".titleimage").css("background-image","url("+$scope.centerskyList[i].cover_image+")");
             }
         }
-    });
-
-    
+    });    
 });

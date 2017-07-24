@@ -1,9 +1,9 @@
-<div class="all">
+<div class="homeall">
 	<div class="header">
 		 <div class="swiper-container headerone">
 		 	<div class="swiper-wrapper wrappers">
 				<div class="swiper-slide slides" ng-repeat="imgs in upskyList">
-					<img src="{{imgs.image}}" alt="">
+					<img lazy-src="{{imgs.image}}" alt="">
 				</div>		
 		 	</div>
 		 	<div class="swiper-container diden headertwo">
@@ -18,20 +18,21 @@
 	<div class="center">
 		<div ng-repeat="texts in centerskyList" >
 			<div class="titleimage_box">
-				<div class="titleimage" style="background-image: url('{{texts.head_image}}');" >	<div class="phrase">{{texts.phrase}}</div>
-					<div>{{texts.rate_name}}</div>
-					<div>{{texts.rate_value}}</div>			
+				<div class="titleimage" style="background-image: url('{{texts.head_image}}');" >	
+					<div class="phrase">{{texts.phrase}}</div>
+					<div class="rateNames">{{texts.rate_name}}</div>
+					<div class="rateValue">{{texts.rate_value}}</div>			
 				</div>
 					
 				<div class="center_text">
 						<div class="chinese_title">{{texts.chinese_title}}</div>
 						<div>{{texts.main_description}}</div>
-						<p>{{texts.occasion}}<span>{{texts.label[0].value}}</span></p>
+						<p>{{texts.occasion}}<span class="label">{{texts.label[0].value}}</span></p>
 						<div></div>
 						<div>{{texts.chinese_title}}</div>
-						<p>{{texts.fix_price}}</p>
-						<p>{{texts.price}}</p>
-						<div class="min_img"><img src="{{texts.cover_image}}" alt=""></div>
+						<p class="fix_price">{{texts.fix_price}}</p>
+						<p class="price">{{texts.price}}</p>
+						<div class="min_img"><img lazy-src="{{texts.cover_image}}" alt=""></div>
 					</div>
 			</div>
 				
