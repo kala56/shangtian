@@ -17,13 +17,13 @@
 	}elseif ($type == 'productList') {//一件-产品列表
 		$categoryId = $_REQUEST['categoryId'];//分类id，参照getNavCategoryList中获取到的值
 		$pageIndex = $_REQUEST['pageIndex'];//页数
-		$str = file_get_contents('http://api.shangtianapp.com/api/v1/Product/getHomeList?category_id='.$categoryId.'&page='.$pageIndex);
+		$str = file_get_contents('http://api.shangtianapp.com/api/v1/Product/getHomeList?category_Id='.$categoryId.'&page='.$pageIndex);
 	}elseif ($type == 'getArticleCategoryList') {//一篇-顶部菜单
 		$str = file_get_contents('http://api.shangtianapp.com/api/v1/article/getArticleCategoryList');
 	}elseif ($type == "articleList") {//商品列表
 		$categoryId = $_REQUEST['categoryId'];//分类id，参照getNavCategoryList中获取到的值
 		$pageIndex = $_REQUEST['pageIndex'];//页数
-		$str = file_get_contents('http://api.shangtianapp.com/api/v1/article/list?category_id='.$categoryId.'&page='.$pageIndex);
+		$str = file_get_contents('http://api.shangtianapp.com/api/v1/article/list?categoryId='.$categoryId.'&page='.$pageIndex);
 	}elseif ($type == 'getProDetail') {//获取商品详情
 		$product_serial = $_REQUEST['product_serial'];//商品的product_serial
 		$str = file_get_contents('http://api.shangtianapp.com/api/v1/Product/getInfo?product_serial='.$product_serial);
