@@ -21,6 +21,10 @@ app.config(['$routeProvider',function($routeProvider){
 		templateUrl:"",
 		controller:""
 	})
+	.when("/coverDatail/:serial",{
+		templateUrl:"html/coverDatail.html",
+		controller:"getCoverDatail"
+	})
 	.otherwise({
 		redirectTo:'/home' //默认
 	})

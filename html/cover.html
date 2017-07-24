@@ -19,9 +19,9 @@
 			<div class="swiper-slide" id = "oneFace">
 			<!-- 重复创建的商品 -->
 				<div class = "oneBox" ng-repeat="product in productList" >
-					<div class = "oneImg" style="background-image:url('{{product.head_image}}');">
+					<div class = "oneImg" style="background-image:url('{{product.head_image}}');" ng-click="getDatail(product.serial)">
 						<div>{{product.chinese_title}}</div>
-					 </div>
+					</div>
 					<div class ="oneDirection">{{product.main_description}}</div>
 					<div class = "smallDatial">
 						<div class ="Sleft">

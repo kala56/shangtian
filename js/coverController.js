@@ -1,4 +1,4 @@
-app.controller("coverController",function($scope,$http){
+app.controller("coverController",function($scope,$http,$location){
 	$scope.coverList = [];
 	// 获取商品菜单
 	$http({
@@ -17,13 +17,18 @@ app.controller("coverController",function($scope,$http){
             $($(".coverMenu>.outBox>.menuList>div>span")[index]).addClass("ColorBor");
             mySwiper.slideTo(index, 500,false);
 		}
+		// 页面间传值的实现
+		$scope.getDatail = function(id){
+			$location.path("/coverDatail/"+id);
+		}
 	})
-	// 获取BEST商品列表
+	// 获取BEST商品列表FG
 	$scope.productList = [];
 	$http({
 		url:"data/shangtian.php?type=productList&categoryId=30&pageIndex=1"
 	}).then(function(data){
 		$scope.productList = data.data.data.product_list;
+		console.log(data.data.data.product_list);
 		$scope.like = function($index){
 			if($($(".smallDatial>.Sright>img")[$index]).hasClass("isLove")){
 				$($(".smallDatial>.Sright>img")[$index]).attr("src","images/已收藏@2x.png");
@@ -228,11 +233,12 @@ app.controller("coverController",function($scope,$http){
 		})
 	})
 	// 获取商品详情
-	$http({
-		url:"data/shangtian.php?type=getProDetail&product_serial=10001479"
-	}).then(function(data){
-		console.log(data); //得到一个数组
-	})
+	// $http({
+	// 	url:"data/shangtian.php?type=getProDetail&product_serial=10001479"
+	// }).then(function(data){
+	// 	console.log(data); //得到一个数组
+	// })
+
 	// 板块滑动
 	var mySwiper = new Swiper('.swiper-container',{
                 onSlideChangeEnd: function(swiper) {

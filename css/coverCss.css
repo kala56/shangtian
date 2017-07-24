@@ -268,3 +268,90 @@ a{
 .coverTwoBox>.twoBox>.Sright>span{
 	color:rgb(153,153,153);
 }
+/*一件 商品详情的布局*/
+.DatailBox{
+	width: 100%;
+	max-width: 640px;
+	min-width: 320px;
+	margin: 0 auto;
+	border:1px solid red;
+}
+.fixedHead{
+	width:91%;
+	display: flex;
+	margin: 0 auto;
+	justify-content: space-between;
+}
+.fixedHead>img{
+	width:12%;
+	height:100%;
+	/*display: fixed;*/
+	/*top:0;*/
+	/*z-index: 1;*/
+}
+.DatailBox>.coverImg{
+}
+.DatailBox>.coverImg>img{
+	margin:0 auto;
+	/*margin:-12% auto 0;*/
+}
+.DatailBox>.coverImg>.currentLogo{
+	width:86%;
+	margin:0 auto;
+}
+.DatailBox>.coverImg>.currentLogo>img{
+	width:10%;
+	height:100%;
+	margin:0 0.5%;
+}
+.DatailBox>.coverImg>.introduceAbout{
+	width:91%;
+	margin:0 auto;
+	display: flex;
+	flex-direction:column;
+	border-left:4px solid rgb(77,77,77);
+}
+.DatailBox>.coverImg>.introduceAbout>span:first-child{
+	color:rgb(61,61,61);
+	font-size: 16px;
+}
+.DatailBox>.coverImg>.introduceAbout>span,.DatailBox>.coverImg>.introduceAbout>div{
+	margin:0 0 2% 3%;
+}
+.DatailBox>.coverImg>.introduceAbout>.introduceTwo{
+	font-weight: bold;
+	font-size: 17px;
+}
+.DatailBox>.coverImg>.introduceAbout>.introduceThree{
+	font-weight: bold;
+	font-size: 18px;
+}
+.DatailBox>.coverImg>.introduceAbout>div:last-child>span:first-child{
+	text-decoration: line-through;
+	color:rgb(150,150,150);
+	font-size: 13px;
+}
+.DatailBox>.coverImg>.introduceAbout>div:last-child>span:last-child{
+	color:rgb(255,34,34);
+	font-size: 17px;
+}
+.DatailBox>.coverImg>.introduceMore{
+	width:82%;
+	color:rgb(133,133,133);
+	margin:3% auto;
+}
+.DatailBox>.rateBox{
+	width:91%;
+	margin:6% auto 2%;
+}
+.DatailBox>.rateBox>div:first-child{
+	width:23%;
+	color:rgb(255,203,27);
+	font-size:26px;
+	border-bottom:1px solid rgb(93,93,93);
+}
+.DatailBox>.rateBox>div:last-child{
+	color:black;
+	font-weight: bold;
+	/*font-size:15px;*/
+}
