@@ -1,0 +1,357 @@
+*{
+	padding:0;
+	margin:0;
+	-webkit-tap-highlight-color:transparent;
+	/*设置元素宽高计算方式*/
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+body{
+	font-size: 16px;
+	position: relative;
+	font-family: "微软雅黑";
+	background-color: white;
+}
+ul{
+	list-style-type: none;
+}
+a{
+	text-decoration:none;
+}
+.coverBox{
+	width: 100%;
+	max-width: 640px;
+	min-width: 320px;
+	margin: 0 auto;
+}
+#oneFace{
+	background-color:rgb(51,51,51);
+}
+.coverMenu{
+	width:100%;
+	height:70px;
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+	background-color: rgb(27,27,27);
+}
+.coverMenu>h3{
+	width:100%;
+	display: flex;
+	margin-top:3%;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+.coverMenu>h3>span{
+	color:white;
+}
+.coverMenu>h3>img{
+	width:4%;
+	height:100%;
+	margin:0 1%;
+}
+.coverMenu>.outBox{
+	width:100%;
+	overflow: auto;
+}
+.coverMenu>.outBox>.menuList{
+	display: flex;
+	width:120%;
+	overflow: hidden;
+}
+.coverMenu>.outBox>.menuList>div{
+	width:16%;
+	padding-bottom: 1px;
+	overflow: hidden;
+	text-align: center;
+}
+.coverMenu>.outBox>.menuList>div>span{
+	color:white;
+	font-size: 1.05rem;
+	transition: all .3s;
+}
+.coverMenu>.outBox>.menuList>div:first-child>span{
+	color:rgb(233,191,81);
+	border-bottom:1px solid rgb(233,191,81);
+}
+.ColorBor{
+	color:rgb(233,191,81) !important;
+	border-bottom:1px solid rgb(233,191,81) !important;
+}
+.currentList{
+	width:100%;
+}
+.currentList .oneBox{
+	width:100%;
+	background-color: white;
+}
+.currentList .oneBox .oneImg{
+	height:350px;
+	display: flex;
+	align-items: flex-end;
+	background-size: 100% 113%;
+	/*background-image:linear-gradient(to bottom,red,transparent);*/
+	box-shadow:0px -10px 40px 0px rgba(255,255,255,0.6) inset;
+}
+.currentList .oneBox .oneImg>div{
+	width:95%;
+	margin:0 auto -20px;
+	color:black;
+	font-size: 2rem;
+}
+.currentList .oneBox .oneDirection{
+	width:95%;
+	font-size:13px;
+	margin:10% auto;
+	color:rgb(109,109,109);
+}
+.currentList .oneBox .smallDatial{
+	width:95%;
+	height:250px;
+	margin:10% auto 5%;
+	display: flex;
+	justify-content: space-between;
+}
+.currentList .oneBox .smallDatial .Sleft{
+	width:83%;
+	height:100%;
+	display: flex;
+	flex-direction: column;	
+}
+.currentList .oneBox .smallDatial .Sleft>div:first-child{
+	display: flex;
+	align-items: center;	
+	height:15%;
+}
+.currentList .oneBox .smallDatial .Sleft>div:first-child>span{
+	color:rgb(109,109,109);
+}
+.currentList .oneBox .smallDatial .Sleft>div:first-child>img{
+	width:12%;
+	margin:0 1%;
+}
+.currentList .oneBox .smallDatial .Sleft .priceAndImg{
+	width:100%;
+	height:70%;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;	
+}
+.currentList .oneBox .smallDatial .Sleft .priceAndImg>div{
+	width:30%;
+	height:80%;
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+}
+.currentList .oneBox .smallDatial .Sleft .priceAndImg>div>div{
+	font-size: 17px;
+	font-weight: bold;
+}
+.currentList .oneBox .smallDatial .Sleft .priceAndImg div .through{
+	font-size:15px;
+	text-decoration: line-through;
+	color:rgb(154,154,154);
+}
+.currentList .oneBox .smallDatial .Sleft .priceAndImg div span{
+	font-size: 18px;
+	color:rgb(206,27,46);
+}
+.currentList .oneBox .smallDatial .Sleft .priceAndImg img{
+	width:70%;
+}
+.currentList .oneBox .smallDatial .Sright{
+	width:13%;
+	text-align:center;
+}
+/*点赞时的动画*/
+@keyframes big{
+	from{
+		transform: scale(1);
+	}
+	50%{
+		transform: scale(1.2);
+	}
+	to{
+		transform: scale(1);
+	}
+}
+@keyframes big1{
+	from{
+		transform: scale(1);
+	}
+	50%{
+		transform: scale(1.2);
+	}
+	to{
+		transform: scale(1);
+	}
+}
+.currentList .oneBox .smallDatial .Sright img{
+	transition: all .3s;
+	width:95%;
+}
+.currentList .oneBox .smallDatial .Sright span{
+	color:rgb(153,153,153);
+}
+
+/*第二个界面*/
+.coverTwoBox{
+	width: 100%;
+	background-color:white;
+	border:1px solid transparent;
+}
+.coverTwoBox>.twoBox{
+	width:95%;
+	height:300px;
+	display: flex;
+	margin:3% auto;
+	justify-content: space-between;
+}
+.coverTwoBox>.twoBox>.Sleft{
+	width:83%;
+	height:100%;
+	background-size: 82% 80%;
+	background-repeat: no-repeat;
+	background-position: right top;
+}
+.coverTwoBox>.twoBox>.Sleft>.priceAndInfo{
+	width:50%;
+	height:70%;
+	display: flex;
+	flex-direction:column;
+	justify-content: space-around;
+}
+.coverTwoBox>.twoBox>.Sleft>.priceAndInfo>div{
+	display: flex;
+	align-items: center;	
+	height:16%;
+}
+.coverTwoBox>.twoBox>.Sleft>.priceAndInfo>div:first-child{
+	display: flex;
+	align-items: center;
+}
+.coverTwoBox>.twoBox>.Sleft>.priceAndInfo>div>span{
+	color:rgb(109,109,109);
+}
+.coverTwoBox>.twoBox>.Sleft>.priceAndInfo>div>img{
+	width:25%;
+	margin:0 2%;
+}
+.coverTwoBox>.twoBox>.Sleft>.priceAndInfo>.cuTitle{
+	font-size: 20px;
+	text-shadow: 1px 1px 0px white;
+}
+.coverTwoBox>.twoBox>.Sleft>.priceAndInfo>.through{
+	font-size:15px;
+	text-decoration: line-through;
+	color:rgb(154,154,154);
+}
+.coverTwoBox>.twoBox>.Sleft>.priceAndInfo>span{
+	font-size: 18px;
+	color:rgb(206,27,46);
+}
+.coverTwoBox>.twoBox>.Sright{
+	width:13%;
+	height:100%;
+	display: flex;
+	flex-direction:column;
+	align-items: center;
+}
+.coverTwoBox>.twoBox>.Sright>div{
+	width:100%;
+}
+.coverTwoBox>.twoBox>.Sright>div>img{
+	width:100%;
+}
+.coverTwoBox>.twoBox>.Sright>span{
+	color:rgb(153,153,153);
+}
+/*一件 商品详情的布局*/
+.DatailBox{
+	width: 100%;
+	max-width: 640px;
+	min-width: 320px;
+	margin: 0 auto;
+	border:1px solid red;
+}
+.fixedHead{
+	width:91%;
+	display: flex;
+	margin: 0 auto;
+	justify-content: space-between;
+}
+.fixedHead>img{
+	width:12%;
+	height:100%;
+	/*display: fixed;*/
+	/*top:0;*/
+	/*z-index: 1;*/
+}
+.DatailBox>.coverImg{
+}
+.DatailBox>.coverImg>img{
+	margin:0 auto;
+	/*margin:-12% auto 0;*/
+}
+.DatailBox>.coverImg>.currentLogo{
+	width:86%;
+	margin:0 auto;
+}
+.DatailBox>.coverImg>.currentLogo>img{
+	width:10%;
+	height:100%;
+	margin:0 0.5%;
+}
+.DatailBox>.coverImg>.introduceAbout{
+	width:91%;
+	margin:0 auto;
+	display: flex;
+	flex-direction:column;
+	border-left:4px solid rgb(77,77,77);
+}
+.DatailBox>.coverImg>.introduceAbout>span:first-child{
+	color:rgb(61,61,61);
+	font-size: 16px;
+}
+.DatailBox>.coverImg>.introduceAbout>span,.DatailBox>.coverImg>.introduceAbout>div{
+	margin:0 0 2% 3%;
+}
+.DatailBox>.coverImg>.introduceAbout>.introduceTwo{
+	font-weight: bold;
+	font-size: 17px;
+}
+.DatailBox>.coverImg>.introduceAbout>.introduceThree{
+	font-weight: bold;
+	font-size: 18px;
+}
+.DatailBox>.coverImg>.introduceAbout>div:last-child>span:first-child{
+	text-decoration: line-through;
+	color:rgb(150,150,150);
+	font-size: 13px;
+}
+.DatailBox>.coverImg>.introduceAbout>div:last-child>span:last-child{
+	color:rgb(255,34,34);
+	font-size: 17px;
+}
+.DatailBox>.coverImg>.introduceMore{
+	width:82%;
+	color:rgb(133,133,133);
+	margin:3% auto;
+}
+.DatailBox>.rateBox{
+	width:91%;
+	margin:6% auto 2%;
+}
+.DatailBox>.rateBox>div:first-child{
+	width:23%;
+	color:rgb(255,203,27);
+	font-size:26px;
+	border-bottom:1px solid rgb(93,93,93);
+}
+.DatailBox>.rateBox>div:last-child{
+	color:black;
+	font-weight: bold;
+	/*font-size:15px;*/
+}

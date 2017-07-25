@@ -25,7 +25,7 @@ input{
 ul,ol{
 	list-style: none;
 }
-.homeall{
+.all{
 	background-color: rgb(51,51,51);
 	width: 100%;
 	max-width: 640px;
@@ -34,6 +34,9 @@ ul,ol{
 }
 .header,.header>.headerone,.header>.headerone>.wrappers{
 	width: 100%;
+}
+.header>.headerone{
+	overflow: hidden;
 }
 .headers{
 	text-align: center;
@@ -79,22 +82,28 @@ img{
 	margin:auto;
 	width: 40%;
 }
-.phrase{
+.min_img{
+	margin:auto;
+	width: 40%;
+}
+/*.phrase{
 	width: 19%;
 	margin-left: 20px;
 	background-color:rgb(51,51,51);
 	color: rgb(250,207,20);
 	padding: 5px;
-}
+}*/
 .rateNames,.rateValue{
-	color: red;
 	width: 19%;
-	font-size: 20px;
 	margin-left: 20px;
-	padding: 5px;
+}
+.rateValue{
+	font-size: 30px;
+	line-height: bold;
 }
 .fix_price{
-	color: red;
+	color: #BEBEBE;
+	font-size: 12px;
 	text-decoration: line-through;
 }
 .label{
@@ -104,4 +113,21 @@ img{
 .chinese_title{
 	font-size: 30px;
 	margin-top: -23px;
+}
+.price{
+	color: red;
+}
+.main_description{
+	color: #7B7B7B;
+}
+.occasion{
+	color: #7B7B7B;
+}
+.names{
+	background-color: black;
+	padding: 5px;
+	color: white;
+}
+.words{
+	color:white;
 }
