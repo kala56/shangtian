@@ -21,6 +21,10 @@ app.config(['$routeProvider',function($routeProvider){
 		templateUrl:"",
 		controller:""
 	})
+	.when("/pieceDatail/:defaultde",{//一套详情
+		templateUrl:"html/particle.html",
+		controller:"particleController"
+	})
 	.otherwise({
 		redirectTo:'/home' //默认
 	})

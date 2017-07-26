@@ -26,7 +26,7 @@ ul,ol{
 	list-style: none;
 }
 .all{
-	background-color: rgb(51,51,51);
+	/*background-color: rgb(51,51,51);*/
 	width: 100%;
 	max-width: 640px;
 	min-width: 320px;
