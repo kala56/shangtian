@@ -35,6 +35,9 @@ ul,ol{
 .header,.header>.headerone,.header>.headerone>.wrappers{
 	width: 100%;
 }
+.header>.headerone{
+	overflow: hidden;
+}
 .headers{
 	text-align: center;
 }
@@ -78,4 +81,71 @@ img{
 .min_img{
 	margin:auto;
 	width: 40%;
+}
+.min_img{
+	margin:auto;
+	width: 40%;
+}
+/*.phrase{
+	width: 19%;
+	margin-left: 20px;
+	background-color:rgb(51,51,51);
+	color: rgb(250,207,20);
+	padding: 5px;
+}*/
+.rateNames,.rateValue{
+	width: 19%;
+	margin-left: 20px;
+}
+.rateValue{
+	font-size: 30px;
+	line-height: bold;
+}
+.fix_price{
+	color: #BEBEBE;
+	font-size: 12px;
+	text-decoration: line-through;
+}
+.label{
+	color: white;
+	background-color: red;
+}
+.chinese_title{
+	font-size: 30px;
+	margin-top: -23px;
+}
+.price{
+	color: red;
+}
+.main_description{
+	color: #7B7B7B;
+}
+.occasion{
+	color: #7B7B7B;
+}
+.names{
+	background-color: black;
+	padding: 5px;
+	color: white;
+}
+.words{
+	color:white;
+}
+.minimages_box{
+	width: 100%;
+	height: 150px;
+}
+.minimages_box2{
+	width: 180%;
+	height: 150px;
+	overflow: hidden;
+
+
+}
+.minimages_box2>.minimages_div{
+	float: left;
+	width: 18%;
+}
+.minimages_box2>.minimages_div>img{
+	width: 100%;
 }

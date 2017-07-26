@@ -38,11 +38,9 @@ app.controller("article_con",function($scope,$http){
 		$scope.articleStyle =data.data.data.list;
 		// console.log($scope.articleStyle);
 		//点赞 变化
-		$scope.love_zan = function($index){ 
-			var img =$($(".article_zan>img")[$index]);
-			var qq =$($(".article_zan>span")[$index]);
-			$($(".article_zan>img")[$index]).addClass('animated pulse');
-			
+		$scope.love_one = function($index){ 
+			var img =$($(".article_one>img")[$index]);
+			var qq =$($(".article_one>span")[$index]);
 			setTimeout(function(){	
 		        	$('.collect').css('display','none');   	  	
 	   		}, 2500);
@@ -50,6 +48,7 @@ app.controller("article_con",function($scope,$http){
 				img.attr("src","images/场景-已收藏@2x.png");			
 				qq.text(parseInt(qq.text())+1);	
 				$('.collect').text('收藏成功');	
+				$($(".article_one>img")[$index]).css('animation','big .4s linear');
 				$('.collect').css('display','block');
 				$(".fixed").addClass('animated pulse');
 				$('.collect').addClass('animated fadeIn');
@@ -57,6 +56,7 @@ app.controller("article_con",function($scope,$http){
                 img.attr("src", 'images/场景-收藏@2x.png');
                 qq.text(parseInt(qq.text())-1);
 				$('.collect').text('取消收藏');
+				$($(".article_one>img")[$index]).css('animation','big1 .4s linear');
 				$('.collect').css('display','block');
 				$('.collect').addClass('animated fadeIn');
 			}
@@ -70,6 +70,30 @@ app.controller("article_con",function($scope,$http){
 		// console.log(data);
 		$scope.articleDress =data.data.data.list;
 		// console.log($scope.articleDress);
+		$scope.love_two = function($index){ 
+			var img =$($(".article_two>img")[$index]);
+			var qq =$($(".article_two>span")[$index]);
+			console.log("123");
+			setTimeout(function(){	
+		        	$('.collect').css('display','none');   	  	
+	   		}, 2500);
+			if (img.attr("src") == ('images/场景-收藏@2x.png')) {			
+				img.attr("src","images/场景-已收藏@2x.png");			
+				qq.text(parseInt(qq.text())+1);	
+				$('.collect').text('收藏成功');	
+				$($(".article_two>img")[$index]).css('animation','big .4s linear');
+				$('.collect').css('display','block');
+				$(".fixed").addClass('animated pulse');
+				$('.collect').addClass('animated fadeIn');
+			}else{
+                img.attr("src", 'images/场景-收藏@2x.png');
+                qq.text(parseInt(qq.text())-1);
+				$('.collect').text('取消收藏');
+				$($(".article_two>img")[$index]).css('animation','big1 .4s linear');
+				$('.collect').css('display','block');
+				$('.collect').addClass('animated fadeIn');
+			}
+		}
 	});
 	//穿鞋
 	$scope.articlePuton = [];
