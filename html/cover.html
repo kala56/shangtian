@@ -3,7 +3,7 @@
 	<div class ="coverMenu">
 		<h3>
 			<span>一件</span> 
-			<img src="images/down_arrow@2x.png" alt="">
+			<a href="#!aside"><img src="images/down_arrow@2x.png" alt=""></a>
 		</h3>
 		<div class ="outBox">
 			<div class ="menuList ">
@@ -36,7 +36,7 @@
 									<span class="through">{{product.fix_price}}</span>
 									<span>{{product.price}}</span>
 								</div>
-								<img src="{{product.cover_image}}" alt="" >
+								<img src="{{product.cover_image}}" alt="" ng-click="getDatail(product.serial)">
 							</div>
 						</div>
 						<div class ="Sright">
@@ -50,7 +50,7 @@
 			<div class="swiper-slide">
 				<div class ="coverTwoBox">
 					<div class = "twoBox" ng-repeat="jacket in jacketList">
-						<div class ="Sleft" style="background-image:url({{jacket.cover_image}})">
+						<div class ="Sleft" style="background-image:url({{jacket.cover_image}})" ng-click="getDatail(jacket.serial)">
 							<div class = "priceAndInfo">
 								<div>
 									<span>{{jacket.occasion}}</span> 
@@ -73,7 +73,7 @@
 			<div class="swiper-slide">
 				<div class ="coverTwoBox coverThreeBox">
 					<div class = "twoBox" ng-repeat="pants in pantsList">
-						<div class ="Sleft" style="background-image:url({{pants.cover_image}})">
+						<div class ="Sleft" style="background-image:url({{pants.cover_image}})" ng-click="getDatail(pants.serial)">
 							<div class = "priceAndInfo">
 								<div>
 									<span>{{pants.occasion}}</span> 
@@ -96,7 +96,7 @@
 			<div class="swiper-slide">
 				<div class ="coverTwoBox coverFourBox">
 					<div class = "twoBox" ng-repeat="shops in shopsList">
-						<div class ="Sleft" style="background-image:url({{shops.cover_image}})">
+						<div class ="Sleft" style="background-image:url({{shops.cover_image}})" ng-click="getDatail(shops.serial)">
 							<div class = "priceAndInfo">
 								<div>
 									<span>{{shops.occasion}}</span>
@@ -119,7 +119,7 @@
 			<div class="swiper-slide">
 				<div class ="coverTwoBox coverFiveBox">
 					<div class = "twoBox" ng-repeat="little in littleList">
-						<div class ="Sleft" style="background-image:url({{little.cover_image}})">
+						<div class ="Sleft" style="background-image:url({{little.cover_image}})" ng-click="getDatail(little.serial)">
 							<div class = "priceAndInfo">
 								<div>
 									<span>{{little.occasion}}</span>
@@ -142,7 +142,7 @@
 			<div class="swiper-slide">
 				<div class ="coverTwoBox coverSixBox">
 					<div class = "twoBox" ng-repeat="playList in playList">
-						<div class ="Sleft" style="background-image:url({{playList.cover_image}})">
+						<div class ="Sleft" style="background-image:url({{playList.cover_image}})" ng-click="getDatail(playList.serial)">
 							<div class = "priceAndInfo">
 								<div>
 									<span>{{playList.occasion}}</span> 

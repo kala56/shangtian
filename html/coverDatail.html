@@ -1,28 +1,75 @@
-<div class="DatailBox">
-	<div class="fixedHead">
-		<img src="images/product_back@2x.png">
-		<img src="images/product_share@2x.png">
-	</div>
-	<div class ="coverImg">
-		<img src="{{allDatail.cover_image}}">
-		<div class="currentLogo">
-			<img src="images/{{imgObj.value}}@2x.png" ng-repeat="imgObj in allDatail.character_label">
+<div class ="outBig">
+	<div class ="outSmall">
+	<!-- 前端可以固定且淡入淡出的部分 -->
+		<div class = "fixedHead">
+			<img src = "images/product_back@2x.png">
+			<img src = "images/product_share@2x.png">
 		</div>
-		<div class="introduceAbout">
-			<span>{{allDatail.occasion_name}}</span>
-			<span class ="introduceTwo">{{allDatail.english_title}}</span>
-			<span class ="introduceThree">{{allDatail.chinese_title}}</span>
-			<div>
-				<span>{{allDatail.price}}</span>
-				<span>{{allDatail.fix_price}}</span>
+		<!-- 中间可以滑动的部分 -->
+		<div class = "DatailBox">
+			<div class  = "coverImg">
+				<img src = "{{allDatail.cover_image}}">
+				<div class = "currentLogo">
+					<img src = "images/{{imgObj.value}}@2x.png" ng-repeat = "imgObj in allDatail.character_label">
+				</div>
+				<div class = "introduceAbout">
+					<span>{{allDatail.occasion_name}}</span>
+					<span class = "introduceTwo">{{allDatail.english_title}}</span>
+					<span class = "introduceThree">{{allDatail.chinese_title}}</span>
+					<div>
+						<span>{{allDatail.price}}</span>
+						<span>{{allDatail.fix_price}}</span>
+					</div>
+				</div>
+				<div class = "introduceMore">{{allDatail.description}}</div>
+			</div>
+			<!-- 比例部分 -->
+			<div class  = "rateBox">
+				<div>{{allDatail.recommend_rate}}</div>
+				<div>UP INDEX</div>
+			</div>
+			<!-- 饼状图部分 -->
+			<div class = "rateTwo">
+				<div class = "myStat2"  ng-repeat = "obj in keys" data-dimension = "250" data-text = "{{obj.name}}" data-width = "5" data-fontsize = "38" data-percent = "{{obj.rate}}" data-fgcolor = "rgb(255,205,31)" data-bgcolor = "#eee" >{{obj.name}}</div>
+			</div>
+
+			<!-- 实物图 -->
+			<div class = "trueImg">
+				<div>DESIGNER</div>
+				<div class = "trueImgBox">		
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide" style="width: 100%;height: 500px;">
+								<img src="{{lookImgone}}">
+							</div>
+							<div class="swiper-slide" style="width: 100%;height: 500px;">
+								<img src="{{lookImgtwo}}">
+							</div>
+							<div class="swiper-slide" style="width: 100%;height: 500px;">
+								<img src="{{lookImgthree}}">
+							</div>
+							<div class="swiper-slide" style="width: 100%;height: 500px;">
+								<img src="{{lookImgfour}}">
+							</div>
+						</div>
+					</div>
+					<div class= "Loop">
+						<div>01</div>
+						<div>02</div>
+						<div>03</div>
+						<div>04</div>
+					</div>
+				</div>
 			</div>
 		</div>
-		<div class ="introduceMore">{{allDatail.description}}</div>
+	<!-- 后端可以固定且淡入淡出的部分 -->
+		<div class = "DatailFooter">
+			<div>
+				<div class="collection">
+					<img src="images/上（常态）—单品详情@2x.png" ng-click="likethis()" class = "isLike">
+				</div>			
+			</div>
+			<a href="{{allDatail.purchase_url}}"><span>去购买</span></a>
+		</div>
 	</div>
-	<!-- 比例部分 -->
-	<div class="rateBox">
-		<div>{{allDatail.recommend_rate}}</div>
-		<div>UP INDEX</div>
-	</div>
-	<!-- 饼状图部分 -->
 </div>
