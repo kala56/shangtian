@@ -5,16 +5,41 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
 	<title></title>
 	<script src="js/angular.min.js"></script>
-    <script src="js/angular-route.min.js"></script>
-    <script src ="js/jquery-3.1.1.min.js"></script>
-    <link rel="stylesheet" href="css/coverCss.css">
+   	 <script src="js/angular-route.min.js"></script>
+   	 <script src ="js/jquery-3.1.1.min.js"></script>
+   	 <link rel="stylesheet" href="css/coverCss.css">
 	<link rel="stylesheet" href="css/article.css">
 	<link rel="stylesheet" href="css/setSkype.css">
-	<link rel="stylesheet" href= "css/swiper.min.css">
+	<link rel="stylesheet" href="css/swiper.min.css">
 	<link rel="stylesheet" href="css/home.css">
 	<script src="js/swiper.min.js"></script>
+	<link href="css/jquery.circliful.css" rel="stylesheet" type="text/css" />
+	<script src="js/jquery.circliful.min.js"></script>
+   	<script src ="js/me-lazyload.js"></script>
+   	<script src ="js/jquery-3.1.1.min.js"></script>
+	<link rel="stylesheet" href="css/aside.css">
+	<script src ="js/me-lazyload.js"></script>
+	<script src="js/chart.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<style>
+		body{
+			position: relative;
+		}
+		.fixed{
+			width: 50px;
+			height: 50px;
+			background-image: url(images/导航按钮@2x.png);
+			background-size:50px 50px; 
+			position: fixed;
+			bottom: 20px;
+			right: 10px;
+			z-index: 100;
+			animate-delay: 1s; 
+		}
+	</style>
 </head>
-<body ng-app = "app">
+<body ng-app="app" ng-controller="rootController">
+	<a href="#!aside" ><div class ="fixed" ng-show ="isShow" ng-click ="showImg()"></div></a>
 	<ng-view></ng-view>
 
 	<script src ="js/AllRoute.js"></script>
@@ -23,4 +48,7 @@
 	<script src = "js/particle.js"></script>
 	<script src="js/home.js"></script>
 	<script src ="js/coverController.js"></script>
+	<script src ="js/myself.js"></script>
+	<script src = "js/getCoverDatail.js"></script>
+
 </body>
